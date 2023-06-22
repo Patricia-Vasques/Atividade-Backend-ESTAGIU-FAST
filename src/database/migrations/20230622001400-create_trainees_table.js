@@ -13,44 +13,54 @@ module.exports = {
         },
 
         name:{
+          allowNull: false,
           type: Sequelize.STRING
         },
 
         email:{
+          allowNull: false,
           type: Sequelize.STRING
         },
 
         rg:{
+          allowNull: false,
           type: Sequelize.STRING,
           unique: true
         },
 
         cpf: {
+          allowNull: false,
           type: Sequelize.STRING,
           unique: true
         },
 
         primary_phone_contact: {
+          allowNull: false,
           type: Sequelize.STRING
         },
 
         secondary_phone_contact: {
+          allowNull: false,
           type: Sequelize.STRING
         },
 
         date_birth: {
+          allowNull: false,
           type: Sequelize.DATE
         },
 
         father_name: {
+          allowNull: false,
           type: Sequelize.STRING
         },
 
         mother_name: {
+          allowNull: false,
           type: Sequelize.STRING
         },
 
         have_special_needs: {
+          allowNull: false,
           type: Sequelize.BOOLEAN
         },
 
