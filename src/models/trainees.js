@@ -1,6 +1,6 @@
-//Atividade-4 do trello
+//Atividade-5 do trello
 const { connection } = require ('../database/connection');
-const { STRING, DATE, BOOLEAN } = require('sequilize');
+const { STRING, DATE, BOOLEAN } = require('sequelize');
 
 const Trainee = connection.define('trainne', {
     name: STRING,
