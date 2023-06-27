@@ -19,8 +19,10 @@ const Trainee = connection.define('trainne', {
     father_name: STRING,
     mother_name: STRING,
     have_special_needs: BOOLEAN,
-    create_at: DATE,
-    updated_at: DATE
-});
+    createAt: DATE,
+    updatedAt: DATE
+},
+{underscored: true}
+);
 
 module.exports = { Trainee };

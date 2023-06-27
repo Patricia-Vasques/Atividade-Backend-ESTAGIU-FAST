@@ -15,9 +15,11 @@ number: STRING,
 complement:STRING,
 rh_analyst_name: STRING,
 supervisor_name: STRING,
-created_at: DATE,
-updated_at: DATE
-})
+createdAt: DATE,
+updatedAt: DATE
+},
+{underscored: true}
+);
 
 module.exports = {
     Companies

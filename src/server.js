@@ -1,13 +1,17 @@
 const express = require('express') //Framework da aplicação
 const cors = require('cors') // Biblioteca utilizada para inserir headers http
 const { connection } = require('./database/connection')
+const routes = require('./routes')
+
 class Server {
     constructor (
+        // Argumento do constructor auto iniciado da aplicação para usarmos as devidas funções do express
         server = express()
     ) {
-        this.middlewares(server)
-        this.initializeServer(server)
-        this.database()
+        this.middlewares(server) // Instância do argumento da função para a função middlewares
+        this.database()  // Instância da função database
+        this.allRoutes(server) // Rotas da aplicação
+        this.initializeServer(server) // Instância da função initializeServer
     }
 
     async  middlewares(app){
@@ -31,6 +35,11 @@ class Server {
             console.error('Não foi possível conectar no banco de dados.', error);
         }
     }
-}
+    
+    async allRoutes(app) {
+        app.use(routes)
+      }
+    }
+
 
 module.exports = { Server }
