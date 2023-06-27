@@ -1,6 +1,6 @@
 //Resolução atividade 7
 const { connection } = require ('../database/connection')
-const { STRING, DATE } = require('sequilize')
+const { STRING, DATE } = require('sequelize')
 
 const Companies = connection.define('companies', {
 cnpj: STRING,
