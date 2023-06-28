@@ -1,6 +1,7 @@
 const { Category } = require('../models/category')
 
 class CategoryController {
+  //POST
   async createOneCategory(request, response) {
     
     const data = await Category.create({ 
@@ -9,6 +10,7 @@ class CategoryController {
     return response.status(201).send(data)
   }
 
+  //GET
   async listOneCategory(request, response) {
     const data = await Category.findAll();
 
