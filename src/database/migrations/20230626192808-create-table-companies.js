@@ -80,7 +80,12 @@ module.exports = {
       updated_at: {
         allowNull: false,
         type: Sequelize.DATE
-      }
+      }, 
+      
+      deleted_at: {
+        type: Sequelize.DATE,
+        allowNull: true
+      },
 
     });
   

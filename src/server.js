@@ -37,7 +37,7 @@ class Server {
     }
     
     async allRoutes(app) {
-        app.use(routes)
+        app.use('/api', routes)
       }
     }
 

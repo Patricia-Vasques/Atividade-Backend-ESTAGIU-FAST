@@ -4,7 +4,7 @@ const { STRING, DATE } = require('sequelize')
 
 const Companies = connection.define('companies', {
 cnpj: STRING,
-company_name: STRING,
+companyName: STRING,
 contact: STRING,
 cep: STRING,
 address: STRING,
@@ -12,9 +12,12 @@ neighborhood: STRING,
 city: STRING,
 state: STRING,
 number: STRING,
-complement:STRING,
-rh_analyst_name: STRING,
-supervisor_name: STRING,
+complement: {
+    type: STRING,
+    allowNull: true
+},
+rhAnalystName: STRING,
+supervisorName: STRING,
 createdAt: DATE,
 updatedAt: DATE
 },
