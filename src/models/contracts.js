@@ -1,5 +1,9 @@
-const { DataTypes } = require('sequelize');
+const { DATE, INTEGER, DATEONLY, BOOLEAN, FLOAT } = require('sequelize');
 const { connection } = require('../database/connection');
+const { Trainees } = require('./trainees');
+const { Companies } = require('./companies');
+const { Category } = require ('./category');
+
 
 const Contract = connection.define('contract', {
   traineesId: {
